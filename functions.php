@@ -117,6 +117,22 @@ function paypal_make_private_shortcode()
 }
 add_shortcode('paypal_make_private','paypal_make_private_shortcode');
 
+function paypal_20_shortcode()
+{
+    /*
+     * Inserts paypal button that donates $25
+     */
+    $code = '<form class="paypal-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">'
+        .'<input type="hidden" name="cmd" value="_s-xclick">'
+        .'<input type="hidden" name="hosted_button_id" value="QBY9MBH3Q2H4G">'
+        .'<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">'
+        .'<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">'
+        .'</form>';
+
+    return $code;
+}
+add_shortcode('paypal_20','paypal_20_shortcode');
+
 function paypal_25_shortcode()
 {
     /*
@@ -162,8 +178,6 @@ function paypal_hero_shortcode()
         .'<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">'
         .'</form>';
 
-
-
     return $code;
 }
 add_shortcode('paypal_hero_membership','paypal_hero_shortcode');
@@ -181,8 +195,6 @@ function paypal_hero_lifetime_shortcode()
         .'<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">'
         .'<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">'
         .'</form>';
-
-
 
     return $code;
 }
